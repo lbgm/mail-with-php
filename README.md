@@ -19,3 +19,5 @@ make http post request on http://yout_image_name_or_localhost:port/send-mail/
   "from_name": "Mail With PHP"
 }
 ```
+
+<img width="653" alt="image" src="https://user-images.githubusercontent.com/92580505/193589991-4118427d-2ea3-4426-89d3-f287ec84dbaf.png">
