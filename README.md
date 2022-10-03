@@ -9,6 +9,7 @@ docker build -t lbgm/mailer  -f Dockerfile ./ --build-arg MAIL_SERVER=mail.examp
 
 ## Request payload
 make http post request on http://yout_image_name_or_localhost:port/send-mail/
+response codes: 200/201 on success end 403 on failed
 
 ```json
 {
