@@ -11,10 +11,19 @@ if(empty($_POST)) {
   $_POST=$POST;
 }
 
-require_once dirname(__FILE__).'/apps/noreply.php';
+require_once dirname(dirname(__FILE__)).'/apps/noreply.php';
 
-$json = mailer::createInstance()->sendMail($_POST['title'],$_POST['to_mail'],$_POST['to_name'],$_POST['message'],$_POST['from_name']);
+$json = null;
 
+if(!empty($_POST)) {
+  $json = mailer::createInstance()->sendMail(
+    $_POST['title'],
+    $_POST['to_mail'],
+    $_POST['to_name'],
+    $_POST['message'],
+    $_POST['from_name']
+  );
+}
 
 if($json===true)
 {

@@ -24,16 +24,16 @@ protected $from="";//email
 
 public function __construct() //constructor
 {
-$this->smtp_serv=$_ENV['MAIL_SERVER'];//server
-$this->port=(int)$_ENV['MAIL_PORT'];
-$this->secure=$_ENV['MAIL_SECURE'];
-$this->account=$_ENV['MAIL_ACCOUNT'];
-$this->acc_pswd=$_ENV['MAIL_ACCOUNT_PASSWORD'];
-$this->from=$_ENV['FROM_MAIL'];//email
+$this->smtp_serv=apache_getenv('MAIL_SERVER');//server
+$this->port=(int)apache_getenv('MAIL_PORT');
+$this->secure=apache_getenv('MAIL_SECURE');
+$this->account=apache_getenv('MAIL_ACCOUNT');
+$this->acc_pswd=apache_getenv('MAIL_ACCOUNT_PASSWORD');
+$this->from=apache_getenv('FROM_MAIL');//email
 
 
 $this->mail = new PHPMailer;
-$this->mail->SMTPDebug =(int)$_ENV['SMTP_DEBUG'];/* 0==no verbose to 1-4==verbose type*/
+$this->mail->SMTPDebug =(int)apache_getenv('SMTP_DEBUG');/* 0==no verbose to 1-4==verbose type*/
 $this->mail->isSMTP();
 $this->mail->Host = $this->smtp_serv;
 $this->mail->Port = $this->port;
