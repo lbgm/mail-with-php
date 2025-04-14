@@ -20,5 +20,3 @@ response codes: 200/201 on success end 403 on failed
   "from_name": "Mail With PHP"
 }
 ```
-
-<img width="653" alt="image" src="https://user-images.githubusercontent.com/92580505/193589991-4118427d-2ea3-4426-89d3-f287ec84dbaf.png">
