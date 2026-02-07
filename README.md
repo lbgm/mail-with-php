@@ -8,13 +8,14 @@ docker build -t lbgm/mailer  -f Dockerfile ./ --build-arg MAIL_SERVER=mail.examp
 ```
 
 ## Request payload
-make http post request on http://yout_image_name_or_localhost:port/send-mail/
-response codes: 200/201 on success end 403 on failed
+make http post request on `http://<mail-with-php-host>:port/send-mail/`;
+
+response codes: `200/201` on **success** end `403` when **failed**
 
 ```json
 {
   "title": "it work lbgm !",
-  "to_mail": "b*****@gmail.com",
+  "to_mail": "hi.balthazar@icloud.com",
   "to_name": "Balthazar DOSSOU",
   "message": "Hi Balthazar, your mail-with-php docker app work well !",
   "from_name": "Mail With PHP"
